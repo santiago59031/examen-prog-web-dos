@@ -1,0 +1,24 @@
+div.contenedor{
+    width: 100%;
+    border: 1px solid gray;
+    
+}
+
+header, footer{
+    padding: 1em;
+    color: rgb(48, 42, 42);
+    background-color: rgb(214, 190, 85);
+    clear: left;
+    text-align: center;
+}
+.integrantes{
+    list-style-type: none;
+    text-align: center;
+    margin-right: 50px;
+    margin-bottom: 70px;
+    
+}
+ul li{
+    margin-bottom: 20px;
+    font-size: 30px;    
+}
