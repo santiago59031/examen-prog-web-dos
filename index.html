@@ -1,11 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Evolución Web</title>
+    <link rel="stylesheet" href="archivo.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+        }
+
+        /* Menú lateral */
+        .menu {
+            width: 220px;
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            min-height: 100vh;
+        }
+        .menu h3 {
+            margin-top: 0;
+            border-bottom: 1px solid #34495e;
+            padding-bottom: 5px;
+        }
+        .menu strong {
+            display: block;
+            margin-top: 10px;
+            color: #f39c12;
+            cursor: pointer;
+        }
+        .menu ul {
+            list-style: none;
+            padding-left: 15px;
+            display: none; /* oculto por defecto */
+        }
+        .menu li {
+            margin: 5px 0;
+        }
+        .menu a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contenido principal */
+        .contenido {
+            flex: 1;
+            padding: 30px;
+            text-align: center;
+        }
+        .contenido h1 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        /* Tabla de imágenes */
+        table {
+            margin: auto;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 20px;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+    <script>
+        // Script para desplegar festivales/subgéneros al hacer clic en el género
+        function toggleFestivales(id) {
+            const lista = document.getElementById(id);
+            lista.style.display = (lista.style.display === "block") ? "none" : "block";
+        }
+    </script>
 </head>
 <body>
-    
+    <!-- Menú lateral -->
+    <div class="menu">
+        <h3>Géneros</h3>
+        <strong onclick="toggleFestivales('rockFestivales')">Rock</strong>
+        <ul id="rockFestivales">
+            <li><a href="festival1.html">Rock al Parque</a></li>
+            <li><a href="festival2.html">Knot Fest</a></li>
+        </ul>
+
+        <strong onclick="toggleFestivales('latinaFestivales')">Música Latina</strong>
+        <ul id="latinaFestivales">
+            <li><a href="festival3.html">Flow Fest</a></li>
+            <li><a href="festival4.html">Vive Latino</a></li>
+        </ul>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="contenido">
+        <h1>Géneros Musicales</h1>
+        <table>
+            <tr>
+                <td><a href="festival1.html"><img src="rock.jpg" alt="Rock"></a></td>
+                <td><a href="festival2.html"><img src="jazz.jpg" alt="Jazz"></a></td>
+            </tr>
+            <tr>
+                <td><a href="festival3.html"><img src="electronica.jpg" alt="Electrónica"></a></td>
+                <td><a href="festival4.html"><img src="latina.jpg" alt="Música Latina"></a></td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
